@@ -61,7 +61,8 @@ cp -r ./${INPUT_GH_PAGES}/last-history/. ./${INPUT_ALLURE_RESULTS}/history
 
 echo "generating report from ${INPUT_ALLURE_RESULTS} to ${INPUT_ALLURE_REPORT} ..."
 #ls -l ${INPUT_ALLURE_RESULTS}
-allure generate --clean ${INPUT_ALLURE_RESULTS} -o ${INPUT_ALLURE_REPORT}
+echo "report will be single-file: ${INPUT_SINGLE_FILE}"
+allure generate --clean ${INPUT_SINGLE_FILE:+"--single-file"} ${INPUT_ALLURE_RESULTS} -o ${INPUT_ALLURE_REPORT}
 #echo "listing report directory ..."
 #ls -l ${INPUT_ALLURE_REPORT}
 

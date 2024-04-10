@@ -53,6 +53,10 @@ inputs:
     description: 'GitHub server URL'
     required: true
     default: ${{ github.server_url }}
+  single_file:
+    description: 'Single file report'
+    required: false
+    default: 'false'
 runs:
   using: 'docker'
   image: 'Dockerfile'

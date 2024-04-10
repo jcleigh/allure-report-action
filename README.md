@@ -48,6 +48,12 @@ This relative path also will be added to GitHub Pages link. Example project [all
 
 Default ``
 
+### `single_file`
+
+If true, will pass the `--single-file` option to the `allure generate` command. See [this Allure pull request](https://github.com/allure-framework/allure2/pull/2072) for more information.
+
+Default `false`
+
 ## Example usage (local action)
 
 ```yaml

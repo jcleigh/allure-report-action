@@ -63,8 +63,8 @@ echo "generating report from ${INPUT_ALLURE_RESULTS} to ${INPUT_ALLURE_REPORT} .
 #ls -l ${INPUT_ALLURE_RESULTS}
 echo "report will be single-file: ${INPUT_SINGLE_FILE}"
 allure generate --clean ${INPUT_SINGLE_FILE:+"--single-file"} ${INPUT_ALLURE_RESULTS} -o ${INPUT_ALLURE_REPORT}
-#echo "listing report directory ..."
-#ls -l ${INPUT_ALLURE_REPORT}
+echo "listing report directory ..."
+ls -l ${INPUT_ALLURE_REPORT}
 
 echo "copy allure-report to ${INPUT_ALLURE_HISTORY}/${INPUT_GITHUB_RUN_NUM}"
 cp -r ./${INPUT_ALLURE_REPORT}/. ./${INPUT_ALLURE_HISTORY}/${INPUT_GITHUB_RUN_NUM}
